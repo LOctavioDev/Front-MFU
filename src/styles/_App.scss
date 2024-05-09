@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #c7c4c4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 95px;
+  padding: 5px 10%;
+
+  .logo {
+    cursor: pointer;
+
+    .img {
+      height: 80px;
+      width: auto;
+      transition: all 0.3s;
+    }
+
+    .img:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .navbar {
+
+    li {
+      list-style: none;
+      display: inline-block;
+      padding: 0 20px;
+      font-size: 25px;
+    }
+
+    li:hover{
+      transform: scale(1.2);
+    }
+
+    .ref {
+      text-decoration: none;
+      color: black;
+    }
+
+    .ref:hover{
+      color: rgb(102, 99, 98);
+    }
+
+  }
+}
