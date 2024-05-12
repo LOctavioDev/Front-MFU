@@ -1,36 +1,34 @@
 import { Link } from "react-router-dom";
 import mfu from "../assets/mfu.svg";
+import lupa from "../assets/lupa.svg";
 
 export default function Navbar() {
   return (
     <header className="header">
-
       <div className="logo">
         <Link to={"/"}>
           <img src={mfu} className="img" />
         </Link>
       </div>
 
+      <div className="search-content">
+        <input type="text" placeholder="Buscar..." className="input-search" />
+        <img src={lupa} alt="icono de busqueda" className="search-icon" />
+      </div>
+
       <nav className="navbar">
         <ul>
-          <li>
-            <Link to={"/"} className="ref">
-              Inicio
-            </Link>
+          <li className="ref">
+            <Link to={"/"} className="Link">Inicio</Link>
           </li>
-          <li>
-            <Link to={"/gender"} className="ref">
-              Generos
-            </Link>
+          <li className="ref">
+            <Link to={"/gender"} className="Link">Generos</Link>
           </li>
-          <li>
-            <Link to={"/create"} className="ref">
-              Crear
-            </Link>
+          <li className="ref">
+            <Link to={"/create"} className="Link">Crear</Link>
           </li>
         </ul>
       </nav>
-
     </header>
   );
 }

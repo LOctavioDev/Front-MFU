@@ -3,6 +3,8 @@ import "./styles/styles.scss";
 import Home from "./windows/start/Home";
 import Gene from "./windows/start/Gene";
 import Create from "./windows/start/Create";
+import Album from "./windows/start/Album";
+import NotFound from "./components/NotFound/NotFound"
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <Route path={"/"} element={<Home />} />
           <Route path={"/gender"} element={<Gene />} />
           <Route path={"/create"} element={<Create />} />
+          <Route path={"/album"} element={<Album />} />
+          <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>

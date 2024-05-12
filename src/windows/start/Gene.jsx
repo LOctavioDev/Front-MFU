@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 
 export default function Gene() {
@@ -5,6 +6,7 @@ export default function Gene() {
     <div>
       <Navbar />
       <h1>Generos</h1>
+      <Footer />
     </div>
   );
 }

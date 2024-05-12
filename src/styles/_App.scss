@@ -2,22 +2,60 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
+.title-p {
+  margin-top: 7%;
+  padding: 10px 10px;
+  text-align: center;
+  background-color: #ede8e8;
+  font-size: 30px;
+
+  h1 {
+    margin: 30px;
+    color: #ff5353;
+  }
+}
+
+.title-a {
+  margin-top: 1%;
+  margin-bottom: 2%;
+  padding: 10px 10px;
+  text-align: center;
+  background-color: #ede8e8;
+  font-size: 30px;
+
+  h1 {
+    margin: 30px;
+    color: #ff5353;
+  }
+}
+
+// ================================ Navbar ================================ //
+
 .header {
-  background-color: #c7c4c4;
+  background-color: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 95px;
-  padding: 5px 10%;
+  justify-content: space-between;
+  height: 15%;
+  width: 100%;
+  padding: 0 10%;
+  box-shadow: 10px 10px 20px -11px rgba(28, 24, 28, 0.66);
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 
   .logo {
     cursor: pointer;
+    margin-left: -10%;
+    // max-width: 100px;
 
     .img {
-      height: 80px;
-      width: auto;
+      height: 160px;
+      width: 160px;
       transition: all 0.3s;
     }
 
@@ -26,27 +64,218 @@
     }
   }
 
-  .navbar {
+  .search-content {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    flex-grow: 1;
 
-    li {
-      list-style: none;
-      display: inline-block;
-      padding: 0 20px;
-      font-size: 25px;
+    .input-search {
+      flex-grow: 1;
+      padding: 17px;
+      font-size: 20px;
+      border-radius: 25px;
+      border: 2px solid #ff5353;
+      outline: none;
+      margin-left: 50px;
+      margin-right: -5px;
+      
+
+      &::placeholder {
+        color: #ff5353;
+      }
+      &:focus {
+        outline: none;
+        border-color: #ff5353;
+        box-shadow: none;
+        color: #ff5353;
+      }
     }
 
-    li:hover{
-      transform: scale(1.2);
+    .search-icon {
+      width: 30px;
+      margin-left: -40px;
+      
+    }
+  }
+
+  .navbar {
+    padding-left: 5%;
+    margin-right: -7%;
+    
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      margin-left: 25px;
+      padding: 0;
     }
 
     .ref {
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 25px;
+      margin-left: 28px;
+      padding: 10px;
+    }
+    
+    .Link{ 
       text-decoration: none;
       color: black;
     }
-
-    .ref:hover{
-      color: rgb(102, 99, 98);
+    .Link:hover{
+      color: #eb7a7a;
     }
 
+    .ref:hover {
+      transform: scale(1.1);
+    }
   }
+}
+
+// ================================ Contenedor principal ================================ //
+
+.container {
+  padding: 1rem;
+  background-color: #ede8e8;
+
+  .song-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    padding: 0 50px;
+    margin-bottom: 1%;
+  }
+
+  .song-card {
+    position: relative;
+    height: 430px;
+    padding: 5px;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    transition: all 0.3s;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .song-card:hover {
+    transform: scale(1.05);
+  }
+
+  .song-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .song-info {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 35px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 18%;
+  }
+
+  .title-song {
+    margin-bottom: 25px;
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  .p-song {
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .view-album-btn {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff5353;
+    color: white;
+    padding: 15px 94px;
+    border: none;
+    width: 50%;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .view-album-btn:hover {
+    background-color: #eb7a7a;
+  }
+
+  // ================================ Artistas ================================ //
+
+  .artist-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    padding: 0 50px;
+    margin-bottom: 50px;
+
+    .artist-card {
+      position: relative;
+      background-color: transparent;
+      border-radius: 10px;
+      padding-top: 10px;
+      overflow: hidden;
+
+      .artist-image {
+        width: 170px;
+        height: 170px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+        margin: 0 auto; // CENTRAR IMAGEN
+        transition: all 0.3s;
+      }
+
+      .artist-image:hover {
+        transform: scale(1.08);
+      }
+
+      .artist-info {
+        padding: 15px;
+        text-align: center;
+
+        .title-artist {
+          margin-top: 15px;
+          font-size: 25px;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+}
+
+// ================================ Footer ================================ //
+
+.footer {
+  // background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer p {
+  margin: 0;
 }
