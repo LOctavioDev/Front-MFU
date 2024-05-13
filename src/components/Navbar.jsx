@@ -7,7 +7,7 @@ export default function Navbar() {
     <header className="header">
       <div className="logo">
         <Link to={"/"}>
-          <img src={mfu} className="img" />
+          <img src={mfu} className="img" alt="logo" />
         </Link>
       </div>
 
