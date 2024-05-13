@@ -5,7 +5,7 @@ export default function ArtistCard({ artist }) {
     <div className="artist-card">
       <div
         className="artist-image"
-        style={{ backgroundImage: `url(${artist.image})` }}
+        style={{ backgroundImage: `url(${artist.image})`}}
       ></div>
       <div className="artist-info">
         <h2 className="title-artist">{artist.title}</h2>

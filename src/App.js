@@ -5,6 +5,7 @@ import Gene from "./windows/start/Gene";
 import Create from "./windows/start/Create";
 import Album from "./windows/start/Album";
 import NotFound from "./components/NotFound/NotFound"
+import CreateAlbum from "./components/forms/CreateAlbum";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path={"/gender"} element={<Gene />} />
           <Route path={"/create"} element={<Create />} />
           <Route path={"/album"} element={<Album />} />
+          <Route path={"/test"} element={<CreateAlbum />} />
           <Route path={"*"} element={<NotFound />} />
         </Routes>
       </BrowserRouter>
