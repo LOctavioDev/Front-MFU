@@ -8,7 +8,6 @@ export default class Api {
     async call() {
       const headers = {
         Accept: "application/json",
-        // LOgica de token
       };
   
       const init = {
