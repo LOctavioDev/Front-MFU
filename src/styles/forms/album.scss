@@ -61,15 +61,15 @@
 
     input {
       width: 100%;
-      padding: 15px;
+      padding: 14px;
       border: 2px solid #ff5353;
       border-radius: 23px;
       outline: none;
-      font-size: 22px;
+      font-size: 20px;
 
       &:focus {
         color: #706f6f;
-        font-size: 22px;
+        font-size: 20px;
       }
     }
 

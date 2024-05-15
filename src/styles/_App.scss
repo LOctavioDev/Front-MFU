@@ -6,6 +6,13 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
+body{
+  background-color: #ede8e8;
+  margin: 0;
+  padding: 0;
+}
+
+
 .title-p {
   margin-top: 100px;
   padding: 10px 10px;
@@ -79,7 +86,6 @@
       outline: none;
       margin-left: 50px;
       margin-right: -5px;
-      
 
       &::placeholder {
         color: #ff5353;
@@ -95,14 +101,13 @@
     .search-icon {
       width: 30px;
       margin-left: -40px;
-      
     }
   }
 
   .navbar {
     padding-left: 5%;
     margin-right: -7%;
-    
+
     ul {
       display: flex;
       align-items: center;
@@ -118,12 +123,12 @@
       margin-left: 28px;
       padding: 10px;
     }
-    
-    .Link{ 
+
+    .Link {
       text-decoration: none;
       color: black;
     }
-    .Link:hover{
+    .Link:hover {
       color: #eb7a7a;
     }
 
@@ -137,18 +142,23 @@
 
 .container {
   padding: 1rem;
-  background-color: #ede8e8;
+  // right: 0;
+  // width: 100%;     
+
 
   .song-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-content: center;
     gap: 30px;
-    padding: 0 25px;
+    margin-left: 1%;
     margin-bottom: 1%;
+    // width: 100%;
   }
 
   .song-card {
     position: relative;
+    width: 400px;
     height: 350px;
     padding: 10px;
     border-radius: 25px;
@@ -276,6 +286,15 @@
   margin-top: 20px;
 }
 
-.footer p {
-  margin: 0;
+@media only screen and (max-width: 769px) {
+  .header {
+    background-color: red;
+  }
+
+  .footer {
+    display: none;
+  }
 }
+
+
+

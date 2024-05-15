@@ -2,9 +2,22 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SongCard from "../../components/SongCard";
 import ArtistCard from "../../components/ArtistCard";
+import { useState } from "react";
 
 // TODO: consumir con la api
 const songs = [
+  {
+    id: 1,
+    title: "Moscow Mule",
+    artist: "Bad Bunny",
+    image: "https://i.scdn.co/image/ab67616d00001e0249d694203245f241a1bcaa72",
+  },
+  {
+    id: 1,
+    title: "Moscow Mule",
+    artist: "Bad Bunny",
+    image: "https://i.scdn.co/image/ab67616d00001e0249d694203245f241a1bcaa72",
+  },
   {
     id: 1,
     title: "Moscow Mule",
@@ -73,18 +86,24 @@ const artists = [
 ];
 
 export default function Home() {
+  const [searchTerm, setSearchTerm] = useState("");
   return (
-    <div>
-      <Navbar />
+    <div className="main">
+      <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
       <div className="container">
         <div className="title-p">
           <h1>Álbumes</h1>
         </div>
 
         <div className="song-list">
-          {songs.map((song, i) => (
-            <SongCard key={i} song={song} />
-          ))}
+          {songs
+            .filter((song) =>
+              song.title.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .map((song, i) => (
+              <SongCard key={i} song={song} />
+            ))}
         </div>
 
         <div className="title-a">
