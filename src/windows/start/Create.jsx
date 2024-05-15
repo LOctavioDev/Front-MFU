@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import CreateAlbum from "../../components/forms/CreateAlbum";
 import Modal from "../../components/Modal";
+/* eslint-disable no-unused-vars */
 import Footer from "../../components/Footer";
+/* eslint-enable no-unused-vars */
 import Navbar from "../../components/Navbar";
 
 import img1 from "../../assets/music.svg";
