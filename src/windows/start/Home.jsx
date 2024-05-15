@@ -1,7 +1,9 @@
 import { useEffect } from "react";
 import Api from "../../utils/Api";
 import Navbar from "../../components/Navbar";
+/* eslint-disable no-unused-vars */
 import Footer from "../../components/Footer";
+/* eslint-enable no-unused-vars */
 import SongCard from "../../components/SongCard";
 import ArtistCard from "../../components/ArtistCard";
 import { useState } from "react";
@@ -117,7 +119,7 @@ export default function Home() {
         )}
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
