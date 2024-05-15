@@ -18,7 +18,7 @@ export default function Home() {
   useEffect(() => {
     const fetchAlbums = async () => {
       const api = new Api(
-        "http://localhost:8000/api/Personas/getAllAlbums",
+        "https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/getAllAlbums",
         "POST",
         {
           nombre: "hola",
@@ -39,7 +39,7 @@ export default function Home() {
 
     const fetchArtists = async () => {
       const api = new Api(
-        "http://localhost:8000/api/Personas/getAllArtists",
+        "https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/getAllArtists",
         "POST",
         {
           nombre: "hola",

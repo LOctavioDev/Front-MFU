@@ -12,7 +12,7 @@ export default function Gene() {
   useEffect(() => {
     const fetchGenders = async () => {
       const api = new Api(
-        "http://localhost:8000/api/Personas/getAllGenders",
+        "https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/getAllGenders",
         "POST",
         { nombre: "Hola" }
       );
