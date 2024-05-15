@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
+/* eslint-disable no-unused-vars */
 import Footer from "../../components/Footer";
+/* eslint-enable no-unused-vars */
 import Navbar from "../../components/Navbar";
 import Api from "../../utils/Api";
 import Messages from "../../components/Messages/Messages";
