@@ -14,7 +14,7 @@ export default function CreateGene({ closeModal }) {
 
   const handleSubmit = async () => {
     try {
-      const api = new Api('http://localhost:8000/api/Personas/addGender', 'POST', genreData);
+      const api = new Api('https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/addGender', 'POST', genreData);
       const response = await api.call();
       
       if (response.response) {
