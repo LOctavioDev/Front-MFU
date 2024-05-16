@@ -14,7 +14,7 @@ const Register = () => {
       await authService.register(userInfo);
       // Redirigir a la página de login o la que prefieras
     } catch (error) {
-      // Manejar error de registro
+      
     }
   };
 

@@ -35,7 +35,7 @@ export default function AlbumDetail() {
 
   return (
     <div className="album-detail">
-      <h1>Álbum {albumId}</h1> {/* Aquí podrías obtener y mostrar más detalles del álbum si es necesario */}
+      <h1>Álbum {albumId}</h1>
       {loading ? (
         <p>Cargando...</p>
       ) : error ? (

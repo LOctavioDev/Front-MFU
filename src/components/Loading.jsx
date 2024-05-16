@@ -1,11 +1,11 @@
 import React from "react";
 
-const Loading = () => {
+const Loading = ({ text }) => {
   return (
     <div className="loading-container">
       <div className="spinner"></div>
       <div className="title-pa">
-        <h1>Cargando...</h1>
+        <h1>{text || "Cargando..."}</h1>
       </div>
     </div>
   );
