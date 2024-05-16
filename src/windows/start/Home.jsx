@@ -8,6 +8,7 @@ import SongCard from "../../components/SongCard";
 import ArtistCard from "../../components/ArtistCard";
 import { useState } from "react";
 import Messages from "../../components/Messages/Messages";
+import Loading from "../../components/Loading";
 
 export default function Home() {
   const [albums, setAlbums] = useState([]);
@@ -72,9 +73,7 @@ export default function Home() {
           <h1>Álbumes</h1>
         </div>
         {loading ? (
-          <div className="title-p">
-            <h1>Cargando...</h1>
-          </div>
+          <Loading />
         ) : (
           <>
             {albumError ? (
@@ -100,14 +99,13 @@ export default function Home() {
         </div>
 
         {loading ? (
-          <div className="title-p">
-            <h1>Cargando...</h1>
-          </div>
+          <Loading />
         ) : (
           <>
             {artistError ? (
 
-              <Messages textError={artistError} />
+              <Messages textError={artistError} />,
+              <Loading />
             ) : (
               <div className="artist-list">
                 {artists.map((artist, i) => (

@@ -5,6 +5,7 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import Api from "../../utils/Api";
 import Messages from "../../components/Messages/Messages";
+import Loading from "../../components/Loading";
 
 export default function Gene() {
   const [genders, setGenders] = useState([]);
@@ -42,9 +43,7 @@ export default function Gene() {
         </div>
   
         {loading ? (
-          <div className="title-p">
-            <h1>Cargando...</h1>
-          </div>
+          <Loading />
         ) : (
           <>
             {gendersError ? (
