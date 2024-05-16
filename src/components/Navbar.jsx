@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import mfu from "../assets/mfu.svg";
 import lupa from "../assets/lupa.svg";
+import LogOut from "./LogOut";
 
 export default function Navbar({ searchTerm, setSearchTerm }) {
   return (
@@ -39,6 +40,14 @@ export default function Navbar({ searchTerm, setSearchTerm }) {
             <Link to={"/create"} className="Link">
               Crear
             </Link>
+          </li>
+          <li className="ref">
+            <Link to={"/create"} className="Link">
+              Crear
+            </Link>
+          </li>
+          <li className="ref">
+            <LogOut />
           </li>
         </ul>
       </nav>

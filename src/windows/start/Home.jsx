@@ -42,11 +42,9 @@ export default function Home() {
 
     const fetchArtists = async () => {
       const api = new Api(
-        "https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/getAllArtists",
+        "https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/getAllArtist",
         "POST",
-        {
-          nombre: "hola",
-        }
+        {}
       );
 
       const data = await api.call();
@@ -103,9 +101,7 @@ export default function Home() {
         ) : (
           <>
             {artistError ? (
-
-              <Messages textError={artistError} />,
-              <Loading />
+              ((<Messages textError={artistError} />), (<Loading />))
             ) : (
               <div className="artist-list">
                 {artists.map((artist, i) => (
