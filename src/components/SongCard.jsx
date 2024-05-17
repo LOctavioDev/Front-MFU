@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import AlbumDetail from "./AlbumDetail";
+// import { Link } from "react-router-dom";
+// import AlbumDetail from "./AlbumDetail";
 
 export default function SongCard({ album, onViewAlbum }) {
   // console.log(onViewAlbum(album.id));
