@@ -9,6 +9,7 @@ import ArtistCard from "../../components/ArtistCard";
 import { useState } from "react";
 import Messages from "../../components/Messages/Messages";
 import Loading from "../../components/Loading";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const [albums, setAlbums] = useState([]);
@@ -18,14 +19,20 @@ export default function Home() {
   const [albumError, setAlbumError] = useState(null);
   const [artistError, setArtistError] = useState(null);
 
+  const navigate = useNavigate();
+
+  const handleViewAlbum = (albumId) => {
+    console.log(albumId+'Home');
+    navigate("/album", { state: { albumId } });
+  };
+
+
   useEffect(() => {
     const fetchAlbums = async () => {
       const api = new Api(
         "https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/getAllAlbums",
         "POST",
-        {
-          nombre: "hola",
-        }
+
       );
 
       const data = await api.call();
@@ -62,6 +69,7 @@ export default function Home() {
     fetchAlbums();
   }, []);
 
+ 
   return (
     <div className="main">
       <Navbar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -85,7 +93,7 @@ export default function Home() {
                       .includes(searchTerm.toLowerCase())
                   )
                   .map((album, i) => (
-                    <SongCard key={i} album={album} />
+                    <SongCard key={album.id} album={album} onViewAlbum={handleViewAlbum} />
                   ))}
               </div>
             )}

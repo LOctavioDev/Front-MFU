@@ -6,12 +6,11 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
-body{
+body {
   background-color: #ede8e8;
   margin: 0;
   padding: 0;
 }
-
 
 .title-p {
   margin-top: 100px;
@@ -54,6 +53,25 @@ body{
   position: fixed;
   top: 0;
   z-index: 500;
+
+  .button-logout {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff5353;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button-logout:hover {
+    background-color: #ff3333;
+  }
+
+  .button-logout:active {
+    transform: translateY(1px);
+  }
 
   .logo {
     cursor: pointer;
@@ -143,15 +161,14 @@ body{
 .container {
   padding: 1rem;
   // right: 0;
-  // width: 100%;     
-
+  // width: 100%;
 
   .song-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     justify-content: center;
     gap: 30px;
-    margin-left: 1%;
+    margin-left: 3%;
     margin-bottom: 1%;
     // width: 100%;
   }
@@ -295,6 +312,3 @@ body{
     display: none;
   }
 }
-
-
-

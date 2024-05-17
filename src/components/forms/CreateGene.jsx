@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Api from '../../utils/Api.js'
+import Swal from 'sweetalert2';
+import Api from '../../utils/Api.js';
 
 export default function CreateGene({ closeModal }) {
   const [genreData, setGenreData] = useState({
@@ -18,7 +19,13 @@ export default function CreateGene({ closeModal }) {
       const response = await api.call();
       
       if (response.response) {
-        console.log('CREADO');
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'El género ha sido creado',
+          showConfirmButton: false,
+          timer: 1500
+        });
         closeModal();
       } else {
         console.error('Error al crear el género:', response.message);

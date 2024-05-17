@@ -13,7 +13,7 @@ const authService = {
   },
 
   register: async (userInfo) => {
-    const api = new Api('https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/registerUser', 'POST', userInfo);
+    const api = new Api('https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/addUser', 'POST', userInfo);
     const data = await api.call();
     return data;
   },

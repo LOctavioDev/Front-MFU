@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import Api from "../utils/Api";
 
-export default function AlbumDetail() {
-  const { albumId } = useParams();
+export default function AlbumDetail({ albumId }) {
   const [songs, setSongs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    console.log(albumId+'111');
     const fetchSongs = async () => {
       const api = new Api(
-        "http://localhost:8000/api/Personas/getAlbumMusic", 
+        "https://site--apimfu--4nfy6d8474fb.code.run/api/Personas/getAlbumMusic", 
         "POST",
         {
-          id: albumId,
+          id: albumId
         }
       );
 

@@ -24,7 +24,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/gender" element={<Gene />} />
               <Route path="/create" element={<Create />} />
-              <Route path="/album" element={<Album />} />
+              {/* <Route path="/album" element={<Album />} /> */}
               <Route path="/album/:albumId" element={<AlbumDetail />} />
               <Route path="/test" element={<CreateAlbum />} />
             </Route>

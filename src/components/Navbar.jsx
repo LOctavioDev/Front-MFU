@@ -42,11 +42,6 @@ export default function Navbar({ searchTerm, setSearchTerm }) {
             </Link>
           </li>
           <li className="ref">
-            <Link to={"/create"} className="Link">
-              Crear
-            </Link>
-          </li>
-          <li className="ref">
             <LogOut />
           </li>
         </ul>
